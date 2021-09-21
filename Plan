@@ -25,10 +25,10 @@ Finalement, le code de la passerelle réseau qui fait la conversion de MQTT-SN �
 
 Objectifs du projet
 
-Améliorer l’efficacité et la stabilité de l’architecture de communication de la serre.
-Implémenter (coder) le protocole iSerre Sensor Network (iSN) sur les cartes microcontrôleurs.
-Pouvoir ajouter ou retirer de nouveaux capteurs dans la serre sans avoir à les configurer manuellement.
-Obtenir de l’expérience de programmation embarquée avec C++ et de programmation de protocoles de communication.
+- Améliorer l’efficacité et la stabilité de l’architecture de communication de la serre.
+- Implémenter (coder) le protocole iSerre Sensor Network (iSN) sur les cartes microcontrôleurs.
+- Pouvoir ajouter ou retirer de nouveaux capteurs dans la serre sans avoir à les configurer manuellement.
+- Obtenir de l’expérience de programmation embarquée avec C++ et de programmation de protocoles de communication.
 
 
 Méthodologie
@@ -46,20 +46,23 @@ Nous allons vérifier si une implémentation du protocole de communication ZigBe
 Nous allons nous référé aux documents techniques des standard existants pour comprendre leur fonctionnement. Par exemple : MQTT et DigiMesh 
 
 Nous allons tenter de voir s’il est possible d’utiliser un seul module Xbee par sink au lieu de deux.
+
+
 Calendrier
-Semaine	Date	Travail
-1	9 janvier	Choix du projet
-2	16 janvier	Formation des équipes et apprentissage du matériel
-3	23 janvier	Apprentissage du matériel installation de l’environnement de développement
-4	30 janvier	Apprentissage des protocoles en place
-5	6 février	Analyse du code de l’architecture réseau
-6	13 février	Analyse du code de l’architecture réseau
-7	20 février	Codage et test (manière itérative)
-8	27 février	Codage et test (manière itérative)/Rédaction du rapport de progrès
-9	6 mars	Codage et test (manière itérative)
-10	13 mars	Codage et test (manière itérative)
-11	20 mars	Codage et test (manière itérative)
-12	27 mars	Codage et test (manière itérative)
-13	3 avril	Finalisation du livrable et préparation de la présentation
-14	10 avril	Présentation du projet 
-15	17 avril	Finalisation du rapport final
+
+Semaine		Date				Travail
+1			9 janvier 2017		Choix du projet
+2			16 janvier 2017		Formation des équipes et apprentissage du matériel
+3			23 janvier 2017		Apprentissage du matériel installation de l’environnement de développement
+4			30 janvier 2017		Apprentissage des protocoles en place
+5			6 février 2017		Analyse du code de l’architecture réseau
+6			13 février 2017		Analyse du code de l’architecture réseau
+7			20 février 2017		Codage et test (manière itérative)
+8			27 février 2017		Codage et test (manière itérative)/Rédaction du rapport de progrès
+9			6 mars 2017			Codage et test (manière itérative)
+10			13 mars	2017		Codage et test (manière itérative)
+11			20 mars	2017		Codage et test (manière itérative)
+12			27 mars	2017		Codage et test (manière itérative)
+13			3 avril	2017		Finalisation du livrable et préparation de la présentation
+14			10 avril 2017		Présentation du projet 
+15			17 avril 2017		Finalisation du rapport final
