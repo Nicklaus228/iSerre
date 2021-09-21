@@ -1,22 +1,38 @@
 
 
 Introduction
+
 Pour se développer, une plante a besoin d’eau, fourni par la pluie, de chaleur fourni par le soleil et d’une terre bonne et fertile. Le rôle d’une mini serre automatisée, est de fournir chacun de ces besoins aux plantes d’une manière absolument autonome et efficace. L’avantage d’une mini serre automatisée est qu’elle peut arroser les plantes et leur donner de la lumière, et de la chaleur même la nuit, grâce à l’arrosage automatique et à l’éclairage de la serre.
-La serre de notre projet sera utilisée par Monsieur Sylvain Delagrange, professeur au département de sciences naturelles à l’UQO, dans le cadre de ses recherches en plantations à croissance rapide et en régénération forestière. 
+
+La serre de notre projet sera utilisée par Monsieur Sylvain Delagrange, professeur au département de sciences naturelles à l’UQO, dans le cadre de ses recherches en plantations à croissance rapide et en régénération forestière.
+
 La serre est munie d’un réseau de capteurs utilisés pour mesurer la température, l’humidité de l’air et du sol ainsi que le taux de CO2 et d’O2. Les capteurs communiquent avec des cartes microcontrôleur appelée « sink » à l’aide d’émetteur/récepteur radio XBEE avec le protocole de routage DigiMesh et le protocole de données MQTT-SN (Sensor Network). Les données des capteurs sont envoyées sur des routeurs XBEE à plus grande portée pour être redirigé sur une Raspberry Pi qui sert en guise de passerelle réseau. La Raspberry Pi fais alors la conversion du protocole MQTT-SN à MQTT et communique avec le serveur web qui sert de MQTT broker, ce serveur communique aussi avec une base de donnée.
+
 La serre compte aussi des activateurs qui servent à contrôler les paramètres environnementaux de celle-ci. Il y a une plaque chauffante, des lumières LED, et un ventilateur.
 Le tout est contrôlable à distance grâce à une application web codé avec un produit Java open source appelé OpenHAB.
+
+
 Tâches à effectuer
+
 Il s’agirait de travailler sur le module de communication, c’est-à-dire les communications réseau dans la serre. Le protocole MQTT-SN a déjà été implémenté dans la serre mais selon M. Kamel Adi des améliorations peuvent être apportées pour augmenter la qualité de l’implémentation.
+
 En deuxième lieu, un protocole de communication appelé iSerre Sensor Network (iSN) a été défini par les étudiants ayant participé à ce projet auparavant mais faute de temps ils n’ont pas pu compléter son implémentation. Ce protocole est responsable de la communication entre les capteurs et les sinks, il permet par exemple de détecter et de configuré de nouveaux capteurs automatiquement.  Le travail consisterait à terminer l’implémentation (codage) de ce protocole sur le matériel ainsi que l’amélioration de sa spécification au besoin.
+
 Finalement, le code de la passerelle réseau qui fait la conversion de MQTT-SN à MQTT pourrait aussi être amélioré.
+
 À noter aussi que l’ajout d’une caméra dans la serre était quelque chose de planifié, si cette caméra est ajouté, il faudra définir et implémenter un protocole pour communiquer avec elle.
+
+
 Objectifs du projet
+
 Améliorer l’efficacité et la stabilité de l’architecture de communication de la serre.
 Implémenter (coder) le protocole iSerre Sensor Network (iSN) sur les cartes microcontrôleurs.
 Pouvoir ajouter ou retirer de nouveaux capteurs dans la serre sans avoir à les configurer manuellement.
 Obtenir de l’expérience de programmation embarquée avec C++ et de programmation de protocoles de communication.
+
+
 Méthodologie
+
 Nous allons commencer par analyser le code qui a été fait et identifié les lacunes ou les points améliorables.
 
 Nous allons utiliser Kinetis Design Studio (KDS) qui va nous permettre de coder les protocoles réseaux sur les microcontrôleurs sans avoir à perdre du temps à apprendre les moindres détails spécifiques au matériel. Il nous permettra aussi de déboguer directement sur la carte. 
